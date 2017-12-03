@@ -1,0 +1,30 @@
+{
+  "name": "workout_tracker_app",
+  "version": "1.0.0",
+  "description": "Web app that allows users to input their workout stats to keep track of them, edit and update them as necessary, and see other people's workouts.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jnm2377/Workout_Tracker_App.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jnm2377/Workout_Tracker_App/issues"
+  },
+  "homepage": "https://github.com/jnm2377/Workout_Tracker_App#readme",
+  "dependencies": {
+    "bcrypt": "^1.0.3",
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "express-session": "^1.15.6",
+    "method-override": "^2.3.10",
+    "mongoose": "^4.13.6",
+    "morgan": "^1.9.0",
+    "pretty-error": "^2.1.1"
+  }
+}
