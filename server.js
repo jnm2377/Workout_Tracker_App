@@ -28,6 +28,7 @@ db.on('connected', () => {
 app.use(express.urlencoded({extended:false}));
 app.use(express.json());
 app.use(morgan('dev'));
+app.use(express.static('public'));
 app.use(session({
   secret: 'waereawr',
   resave: false,
