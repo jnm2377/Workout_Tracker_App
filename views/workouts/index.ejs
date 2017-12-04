@@ -5,8 +5,21 @@
   </head>
   <body>
     <% include ../partials/header %>
-    
-    Welcome, <%= username %>!
+
+    <div class="container container-fluid">
+      <div class="jumbotron">
+        <h1><small><%= username %>'s Workouts</small></h1>
+        <br>
+        <p>
+          <a class="btn btn-primary btn-lg" href="#" role="button">Add Workout</a>
+
+          <a class="btn btn-primary btn-lg" href="#" role="button">My PRs</a>
+
+          <a class="btn btn-primary btn-lg" href="#" role="button">GymRats</a>
+
+        </p>
+      </div>
+
     <br>
     User's Workouts Go Here!
   </body>
