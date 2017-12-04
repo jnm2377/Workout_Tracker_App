@@ -40,7 +40,7 @@ body {
   text-decoration: none;
 }
 
-.jumbotron {
+.jumbo {
   background: gray url('https://i.imgur.com/uejAjwk.png') repeat 0 0;
   animation: backgroundSlide 20s linear infinite;
 }
@@ -58,4 +58,13 @@ body {
 
 .row > p {
   padding: 0 15px;
+}
+
+#home-bottom-btn {
+  text-align: center;
+}
+
+.features-images {
+  width: 70%;
+  margin: auto;
 }
