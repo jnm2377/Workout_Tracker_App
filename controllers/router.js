@@ -18,10 +18,15 @@ router.get('/home', (req, res) => {
 //WORKOUTS INDEX route
 router.get('/workouts', async (req, res) => {
   if(req.session.logged) {
-    // const userWorkouts = await Workout.find({username: req.session.username});
+    const user = await User.find({username: req.session.username});
+    const userWorkouts = await Workout.find({user: user[0]._id});
+    console.log("================");
+    console.log(user);
+    console.log("================");
+    console.log(userWorkouts);
     res.render('workouts/index.ejs', {
-      // workouts: userWorkouts, //will be array that we have to iterate
-      username: req.session.username,
+      user,
+      userWorkouts
     });
   } else {
     res.redirect('/user/login');
@@ -34,11 +39,7 @@ router.get('/workouts/:id', () => {
 
 })
 
-//workouts json
-router.get('/json', (req, res) => {
-  const workouts = Workout.find().populate('user');
-  res.send(workouts);
-})
+
 
 //CREATE workout
 router.get('/new', async (req, res) => {
@@ -196,7 +197,7 @@ router.post('/workouts', async (req, res) => {
   console.log("=========================");
   try {
     const newWorkout = await Workout.create(workoutObj);
-    res.redirect('back');
+    res.redirect('/workouts');
   } catch (e) {
     console.log(e.message);
   }
