@@ -1,3 +1,7 @@
+/********************************************
+            GLOBAL
+*********************************************/
+
 body {
   padding-top: 3rem;
   padding-bottom: 3rem;
@@ -6,6 +10,19 @@ body {
   background: #222;
 }
 
+.jumbo {
+  background: gray url('https://i.imgur.com/uejAjwk.png') repeat 0 0;
+  animation: backgroundSlide 20s linear infinite;
+}
+
+@keyframes backgroundSlide {
+  0% { background-position: 0 0; }
+  100% { background-position: -400px 0; }
+} /*infinite translating image */
+
+/********************************************
+                NAV
+*********************************************/
 .home-nav{
     background-color: #222;
     border-color: #080808;
@@ -40,16 +57,10 @@ body {
   text-decoration: none;
 }
 
-.jumbo {
-  background: gray url('https://i.imgur.com/uejAjwk.png') repeat 0 0;
-  animation: backgroundSlide 20s linear infinite;
-}
 
-@keyframes backgroundSlide {
-  0% { background-position: 0 0; }
-  100% { background-position: -400px 0; }
-} /*infinite translating image */
-
+/********************************************
+            HOME PAGE
+*********************************************/
 
 .row {
   display: flex;
@@ -69,9 +80,17 @@ body {
   margin: auto;
 }
 
+/********************************************
+            ADD WORKOUT FORM PAGE
+*********************************************/
+
 input {
   width: 100%;
 }
+
+/********************************************
+            WORKOUT INDEX PAGE
+*********************************************/
 
 .workouts {
   display: flex;
@@ -83,20 +102,49 @@ input {
   width: 20%;
 }
 
-.thumbnail-container > .thumbnail {
+.thumbnail-container > a > .thumbnail {
   background: #5a5a5a;
   border: 1px solid #5a5a5a;
 }
 
-.thumbnail-container > .thumbnail:hover {
+.thumbnail-container > a > .thumbnail:hover {
   background: #5a5a5a;
   border: 2px solid white;
 }
 
-.thumbnail-container > .thumbnail > .caption > h3 {
+.thumbnail-container > a > .thumbnail > .caption > h3 {
   color: white;
 }
 
-.thumbnail-container > .thumbnail > .caption > p {
+.thumbnail-container > a {
+  text-decoration: none;
+}
+
+/********************************************
+            WORKOUT SHOW PAGE
+*********************************************/
+
+#workout-name {
   color: white;
+}
+
+.workout-show-text {
+  text-align: center;
+}
+
+
+.workout-show-table {
+  margin: auto;
+}
+
+.exercise {
+  padding-bottom: 5px;
+  padding-top: 5px;
+  font-weight: bold;
+  color: white;
+}
+
+.table-row > td {
+  width: 75px;
+  border: 1px solid  #5a5a5a;
 }

@@ -35,8 +35,10 @@ router.get('/workouts', async (req, res) => {
 
 
 //SHOW workout
-router.get('/workouts/:id', () => {
-
+router.get('/workouts/:id', async (req, res) => {
+  const workout = await Workout.findById(req.params.id);
+  console.log(workout);
+  res.render('workouts/show.ejs', {workout});
 })
 
 

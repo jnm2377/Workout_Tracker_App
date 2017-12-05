@@ -17,6 +17,8 @@
 
           <a class="btn btn-primary btn-lg" href="#" role="button">GymRats</a>
 
+          <a class="btn btn-danger btn-lg" href="/user/logout" role="button">Log Out</a>
+
         </p>
       </div>
 
@@ -25,13 +27,15 @@
       <div class="container container-fluid workouts">
         <% for (let i = userWorkouts.length-1; i >= 0; i--) { %>
         <div class="thumbnail-container">
-          <div class="thumbnail">
-            <img src="https://i.imgur.com/i59633l.png?1" alt="workout link">
-            <div class="caption">
-              <h3><%= userWorkouts[i].workout %></h3>
-              <p><%= userWorkouts[i].date %></p>
+          <a href = '/workout_tracker/workouts/<%= userWorkouts[i]._id %>'>
+            <div class="thumbnail">
+              <img src="https://i.imgur.com/i59633l.png?1" alt="workout link">
+              <div class="caption">
+                <h3><%= userWorkouts[i].workout %></h3>
+                <p><%= userWorkouts[i].date %></p>
+              </div>
             </div>
-          </div>
+          </a>
         </div>
         <% } %>
 

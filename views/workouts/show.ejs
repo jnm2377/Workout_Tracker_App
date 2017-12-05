@@ -6,191 +6,201 @@
   <body>
     <% include ../partials/header %>
 
+    <div class="container container-fluid">
+      <div class="workout-show-text">
+        <h3 id="workout-name"><%= workout.workout %></h1>
+        <br>
 
-    <table>
-      <tr>
-        <td>Exercise 1:
-          <tr>
-            <td>&nbsp;weight</td>
-            <td>&nbsp;s1</td>
-            <td>&nbsp;s2</td>
-            <td>&nbsp;s3</td>
-            <td>&nbsp;s4</td>
-            <td>&nbsp;s5</td>
-            <td>&nbsp;s6</td>
-          </tr>
-          <tr>
-            <td>&nbsp;reps</td>
-            <td>&nbsp;0</td>
-            <td>&nbsp;0</td>
-            <td>&nbsp;0</td>
-            <td>&nbsp;0</td>
-            <td>&nbsp;0</td>
-            <td>&nbsp;0</td>
-          </tr>
-        </td>
-      </tr>
+        <h4>Date: <small><%= workout.date %></small></h2>
+        <h4>Notes: <small><%= workout.notes %></small></h2>
+        <br>
+      </div>
 
-      <tr>
-        <td>Exercise 2:
-          <tr>
-            <td>&nbsp;weight</td>
-            <td>&nbsp;s1</td>
-            <td>&nbsp;s2</td>
-            <td>&nbsp;s3</td>
-            <td>&nbsp;s4</td>
-            <td>&nbsp;s5</td>
-            <td>&nbsp;s6</td>
-          </tr>
-          <tr>
-            <td>&nbsp;reps</td>
-            <td>&nbsp;0</td>
-            <td>&nbsp;0</td>
-            <td>&nbsp;0</td>
-            <td>&nbsp;0</td>
-            <td>&nbsp;0</td>
-            <td>&nbsp;0</td>
-          </tr>
-        </td>
-      </tr>
+      <table class="workout-show-table">
+        <tr>
+          <td class="exercise">Exercise 1:
+            <tr class="table-row">
+              <td>&nbsp;weight</td>
+              <td>&nbsp;s1</td>
+              <td>&nbsp;s2</td>
+              <td>&nbsp;s3</td>
+              <td>&nbsp;s4</td>
+              <td>&nbsp;s5</td>
+              <td>&nbsp;s6</td>
+            </tr>
+            <tr class="table-row">
+              <td>&nbsp;reps</td>
+              <td>&nbsp;0</td>
+              <td>&nbsp;0</td>
+              <td>&nbsp;0</td>
+              <td>&nbsp;0</td>
+              <td>&nbsp;0</td>
+              <td>&nbsp;0</td>
+            </tr>
+          </td>
+        </tr>
 
-      <tr>
-        <td>Exercise 3:
-          <tr>
-            <td>&nbsp;weight</td>
-            <td>&nbsp;s1</td>
-            <td>&nbsp;s2</td>
-            <td>&nbsp;s3</td>
-            <td>&nbsp;s4</td>
-            <td>&nbsp;s5</td>
-            <td>&nbsp;s6</td>
-          </tr>
-          <tr>
-            <td>&nbsp;reps</td>
-            <td>&nbsp;0</td>
-            <td>&nbsp;0</td>
-            <td>&nbsp;0</td>
-            <td>&nbsp;0</td>
-            <td>&nbsp;0</td>
-            <td>&nbsp;0</td>
-          </tr>
-        </td>
-      </tr>
+        <tr>
+          <td class="exercise">Exercise 2:
+            <tr class="table-row">
+              <td>&nbsp;weight</td>
+              <td>&nbsp;s1</td>
+              <td>&nbsp;s2</td>
+              <td>&nbsp;s3</td>
+              <td>&nbsp;s4</td>
+              <td>&nbsp;s5</td>
+              <td>&nbsp;s6</td>
+            </tr>
+            <tr class="table-row">
+              <td>&nbsp;reps</td>
+              <td>&nbsp;0</td>
+              <td>&nbsp;0</td>
+              <td>&nbsp;0</td>
+              <td>&nbsp;0</td>
+              <td>&nbsp;0</td>
+              <td>&nbsp;0</td>
+            </tr>
+          </td>
+        </tr>
 
-      <tr>
-        <td>Exercise 4:
-          <tr>
-            <td>&nbsp;weight</td>
-            <td>&nbsp;s1</td>
-            <td>&nbsp;s2</td>
-            <td>&nbsp;s3</td>
-            <td>&nbsp;s4</td>
-            <td>&nbsp;s5</td>
-            <td>&nbsp;s6</td>
-          </tr>
-          <tr>
-            <td>&nbsp;reps</td>
-            <td>&nbsp;0</td>
-            <td>&nbsp;0</td>
-            <td>&nbsp;0</td>
-            <td>&nbsp;0</td>
-            <td>&nbsp;0</td>
-            <td>&nbsp;0</td>
-          </tr>
-        </td>
-      </tr>
+        <tr>
+          <td class="exercise">Exercise 3:
+            <tr class="table-row">
+              <td>&nbsp;weight</td>
+              <td>&nbsp;s1</td>
+              <td>&nbsp;s2</td>
+              <td>&nbsp;s3</td>
+              <td>&nbsp;s4</td>
+              <td>&nbsp;s5</td>
+              <td>&nbsp;s6</td>
+            </tr>
+            <tr class="table-row">
+              <td>&nbsp;reps</td>
+              <td>&nbsp;0</td>
+              <td>&nbsp;0</td>
+              <td>&nbsp;0</td>
+              <td>&nbsp;0</td>
+              <td>&nbsp;0</td>
+              <td>&nbsp;0</td>
+            </tr>
+          </td>
+        </tr>
 
-      <tr>
-        <td>Exercise 5:
-          <tr>
-            <td>&nbsp;weight</td>
-            <td>&nbsp;s1</td>
-            <td>&nbsp;s2</td>
-            <td>&nbsp;s3</td>
-            <td>&nbsp;s4</td>
-            <td>&nbsp;s5</td>
-            <td>&nbsp;s6</td>
-          </tr>
-          <tr>
-            <td>&nbsp;reps</td>
-            <td>&nbsp;0</td>
-            <td>&nbsp;0</td>
-            <td>&nbsp;0</td>
-            <td>&nbsp;0</td>
-            <td>&nbsp;0</td>
-            <td>&nbsp;0</td>
-          </tr>
-        </td>
-      </tr>
+        <tr>
+          <td class="exercise">Exercise 4:
+            <tr class="table-row">
+              <td>&nbsp;weight</td>
+              <td>&nbsp;s1</td>
+              <td>&nbsp;s2</td>
+              <td>&nbsp;s3</td>
+              <td>&nbsp;s4</td>
+              <td>&nbsp;s5</td>
+              <td>&nbsp;s6</td>
+            </tr>
+            <tr class="table-row">
+              <td>&nbsp;reps</td>
+              <td>&nbsp;0</td>
+              <td>&nbsp;0</td>
+              <td>&nbsp;0</td>
+              <td>&nbsp;0</td>
+              <td>&nbsp;0</td>
+              <td>&nbsp;0</td>
+            </tr>
+          </td>
+        </tr>
 
-      <tr>
-        <td>Exercise 6:
-          <tr>
-            <td>&nbsp;weight</td>
-            <td>&nbsp;s1</td>
-            <td>&nbsp;s2</td>
-            <td>&nbsp;s3</td>
-            <td>&nbsp;s4</td>
-            <td>&nbsp;s5</td>
-            <td>&nbsp;s6</td>
-          </tr>
-          <tr>
-            <td>&nbsp;reps</td>
-            <td>&nbsp;0</td>
-            <td>&nbsp;0</td>
-            <td>&nbsp;0</td>
-            <td>&nbsp;0</td>
-            <td>&nbsp;0</td>
-            <td>&nbsp;0</td>
-          </tr>
-        </td>
-      </tr>
+        <tr>
+          <td class="exercise">Exercise 5:
+            <tr class="table-row">
+              <td>&nbsp;weight</td>
+              <td>&nbsp;s1</td>
+              <td>&nbsp;s2</td>
+              <td>&nbsp;s3</td>
+              <td>&nbsp;s4</td>
+              <td>&nbsp;s5</td>
+              <td>&nbsp;s6</td>
+            </tr>
+            <tr class="table-row">
+              <td>&nbsp;reps</td>
+              <td>&nbsp;0</td>
+              <td>&nbsp;0</td>
+              <td>&nbsp;0</td>
+              <td>&nbsp;0</td>
+              <td>&nbsp;0</td>
+              <td>&nbsp;0</td>
+            </tr>
+          </td>
+        </tr>
 
-      <tr>
-        <td>Exercise 7:
-          <tr>
-            <td>&nbsp;weight</td>
-            <td>&nbsp;s1</td>
-            <td>&nbsp;s2</td>
-            <td>&nbsp;s3</td>
-            <td>&nbsp;s4</td>
-            <td>&nbsp;s5</td>
-            <td>&nbsp;s6</td>
-          </tr>
-          <tr>
-            <td>&nbsp;reps</td>
-            <td>&nbsp;0</td>
-            <td>&nbsp;0</td>
-            <td>&nbsp;0</td>
-            <td>&nbsp;0</td>
-            <td>&nbsp;0</td>
-            <td>&nbsp;0</td>
-          </tr>
-        </td>
-      </tr>
+        <tr>
+          <td class="exercise">Exercise 6:
+            <tr class="table-row">
+              <td>&nbsp;weight</td>
+              <td>&nbsp;s1</td>
+              <td>&nbsp;s2</td>
+              <td>&nbsp;s3</td>
+              <td>&nbsp;s4</td>
+              <td>&nbsp;s5</td>
+              <td>&nbsp;s6</td>
+            </tr>
+            <tr class="table-row">
+              <td>&nbsp;reps</td>
+              <td>&nbsp;0</td>
+              <td>&nbsp;0</td>
+              <td>&nbsp;0</td>
+              <td>&nbsp;0</td>
+              <td>&nbsp;0</td>
+              <td>&nbsp;0</td>
+            </tr>
+          </td>
+        </tr>
 
-      <tr>
-        <td>Exercise 8:
-          <tr>
-            <td>&nbsp;weight</td>
-            <td>&nbsp;s1</td>
-            <td>&nbsp;s2</td>
-            <td>&nbsp;s3</td>
-            <td>&nbsp;s4</td>
-            <td>&nbsp;s5</td>
-            <td>&nbsp;s6</td>
-          </tr>
-          <tr>
-            <td>&nbsp;reps</td>
-            <td>&nbsp;0</td>
-            <td>&nbsp;0</td>
-            <td>&nbsp;0</td>
-            <td>&nbsp;0</td>
-            <td>&nbsp;0</td>
-            <td>&nbsp;0</td>
-          </tr>
-        </td>
-      </tr>
-    </table>
+        <tr>
+          <td class="exercise">Exercise 7:
+            <tr class="table-row">
+              <td>&nbsp;weight</td>
+              <td>&nbsp;s1</td>
+              <td>&nbsp;s2</td>
+              <td>&nbsp;s3</td>
+              <td>&nbsp;s4</td>
+              <td>&nbsp;s5</td>
+              <td>&nbsp;s6</td>
+            </tr>
+            <tr class="table-row">
+              <td>&nbsp;reps</td>
+              <td>&nbsp;0</td>
+              <td>&nbsp;0</td>
+              <td>&nbsp;0</td>
+              <td>&nbsp;0</td>
+              <td>&nbsp;0</td>
+              <td>&nbsp;0</td>
+            </tr>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="exercise">Exercise 8:
+            <tr class="table-row">
+              <td>&nbsp;weight</td>
+              <td>&nbsp;s1</td>
+              <td>&nbsp;s2</td>
+              <td>&nbsp;s3</td>
+              <td>&nbsp;s4</td>
+              <td>&nbsp;s5</td>
+              <td>&nbsp;s6</td>
+            </tr>
+            <tr class="table-row">
+              <td>&nbsp;reps</td>
+              <td>&nbsp;0</td>
+              <td>&nbsp;0</td>
+              <td>&nbsp;0</td>
+              <td>&nbsp;0</td>
+              <td>&nbsp;0</td>
+              <td>&nbsp;0</td>
+            </tr>
+          </td>
+        </tr>
+      </table>
+    </div>
   </body>
 </html>
