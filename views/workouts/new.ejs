@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% include ../partials/head %>
+  </head>
+  <body>
+    <% include ../partials/header %>
+
+    <div class="container container-fluid">
+      <h3>Add New Workout</h3>
+      <p>Type in the exercise names of your workouts in the exercise input box. The weight and rep values are defaulted to 0 at the start. For the best workout experience, start by adding the exercise names, create the workout, and then find the workout in your workouts page. Then you can click on your newly created workout to see the stats. Update your weight and reps, and save as you workout.</p>
+
+      <form action = "/workout_tracker/workouts" method="post">
+        <label for="workout">Workout:</label>
+        <input id="workout" name="workout" value="Legs, Back & Bi, Shoulder & Tri, Chest"/>
+        <label for="date">Date:</label>
+        <input id="date" name="date" type="date"/>
+        <br>
+        <br>
+        <table>
+          <tr>
+            <td><input name="exercise1" value="Exercise 1: "/>
+              <tr>
+                <td>&nbsp;Weight:</td>
+                <td><input name="ex1wt1" value="0"/></td>
+                <td><input name="ex1wt2" value="0"/></td>
+                <td><input name="ex1wt3" value="0"/></td>
+                <td><input name="ex1wt4" value="0"/></td>
+                <td><input name="ex1wt5" value="0"/></td>
+                <td><input name="ex1wt6" value="0"/></td>
+              </tr>
+              <tr>
+                <td>&nbsp;Reps:</td>
+                <td><input name="ex1rp1" value="0"/></td>
+                <td><input name="ex1rp2" value="0"/></td>
+                <td><input name="ex1rp3" value="0"/></td>
+                <td><input name="ex1rp4" value="0"/></td>
+                <td><input name="ex1rp5" value="0"/></td>
+                <td><input name="ex1rp6" value="0"/></td>
+              </tr>
+            </td>
+          </tr>
+
+          <tr>
+            <td><input name="exercise2" value="Exercise 2: "/>
+              <tr>
+                <td>&nbsp;Weight:</td>
+                <td><input name="ex2wt1" value="0"/></td>
+                <td><input name="ex2wt2" value="0"/></td>
+                <td><input name="ex2wt3" value="0"/></td>
+                <td><input name="ex2wt4" value="0"/></td>
+                <td><input name="ex2wt5" value="0"/></td>
+                <td><input name="ex2wt6" value="0"/></td>
+              </tr>
+              <tr>
+                <td>&nbsp;Reps:</td>
+                <td><input name="ex2rp1" value="0"/></td>
+                <td><input name="ex2rp2" value="0"/></td>
+                <td><input name="ex2rp3" value="0"/></td>
+                <td><input name="ex2rp4" value="0"/></td>
+                <td><input name="ex2rp5" value="0"/></td>
+                <td><input name="ex2rp6" value="0"/></td>
+              </tr>
+            </td>
+          </tr>
+
+          <tr>
+            <td><input name="exercise3" value="Exercise 3:"/>
+              <tr>
+                <td>&nbsp;Weight:</td>
+                <td><input name="ex3wt1" value="0"/></td>
+                <td><input name="ex3wt2" value="0"/></td>
+                <td><input name="ex3wt3" value="0"/></td>
+                <td><input name="ex3wt4" value="0"/></td>
+                <td><input name="ex3wt5" value="0"/></td>
+                <td><input name="ex3wt6" value="0"/></td>
+              </tr>
+              <tr>
+                <td>&nbsp;Reps:</td>
+                <td><input name="ex3rp1" value="0"/></td>
+                <td><input name="ex3rp2" value="0"/></td>
+                <td><input name="ex3rp3" value="0"/></td>
+                <td><input name="ex3rp4" value="0"/></td>
+                <td><input name="ex3rp5" value="0"/></td>
+                <td><input name="ex3rp6" value="0"/></td>
+              </tr>
+            </td>
+          </tr>
+
+          <tr>
+            <td><input name="exercise4" value="Exercise 4:"/>
+              <tr>
+                <td>&nbsp;Weight:</td>
+                <td><input name="ex4wt1" value="0"/></td>
+                <td><input name="ex4wt2" value="0"/></td>
+                <td><input name="ex4wt3" value="0"/></td>
+                <td><input name="ex4wt4" value="0"/></td>
+                <td><input name="ex4wt5" value="0"/></td>
+                <td><input name="ex4wt6" value="0"/></td>
+              </tr>
+              <tr>
+                <td>&nbsp;Reps:</td>
+                <td><input name="ex4rp1" value="0"/></td>
+                <td><input name="ex4rp2" value="0"/></td>
+                <td><input name="ex4rp3" value="0"/></td>
+                <td><input name="ex4rp4" value="0"/></td>
+                <td><input name="ex4rp5" value="0"/></td>
+                <td><input name="ex4rp6" value="0"/></td>
+              </tr>
+            </td>
+          </tr>
+
+          <tr>
+            <td><input name="exercise5" value="Exercise 5:"/>
+              <tr>
+                <td>&nbsp;Weight:</td>
+                <td><input name="ex5wt1" value="0"/></td>
+                <td><input name="ex5wt2" value="0"/></td>
+                <td><input name="ex5wt3" value="0"/></td>
+                <td><input name="ex5wt4" value="0"/></td>
+                <td><input name="ex5wt5" value="0"/></td>
+                <td><input name="ex5wt6" value="0"/></td>
+              </tr>
+              <tr>
+                <td>&nbsp;Reps:</td>
+                <td><input name="ex5rp1" value="0"/></td>
+                <td><input name="ex5rp2" value="0"/></td>
+                <td><input name="ex5rp3" value="0"/></td>
+                <td><input name="ex5rp4" value="0"/></td>
+                <td><input name="ex5rp5" value="0"/></td>
+                <td><input name="ex5rp6" value="0"/></td>
+              </tr>
+            </td>
+          </tr>
+
+          <tr>
+            <td><input name="exercise6" value="Exercise 6: "/>
+              <tr>
+                <td>&nbsp;Weight:</td>
+                <td><input name="ex6wt1" value="0"/></td>
+                <td><input name="ex6wt2" value="0"/></td>
+                <td><input name="ex6wt3" value="0"/></td>
+                <td><input name="ex6wt4" value="0"/></td>
+                <td><input name="ex6wt5" value="0"/></td>
+                <td><input name="ex6wt6" value="0"/></td>
+              </tr>
+              <tr>
+                <td>&nbsp;Reps:</td>
+                <td><input name="ex6rp1" value="0"/></td>
+                <td><input name="ex6rp2" value="0"/></td>
+                <td><input name="ex6rp3" value="0"/></td>
+                <td><input name="ex6rp4" value="0"/></td>
+                <td><input name="ex6rp5" value="0"/></td>
+                <td><input name="ex6rp6" value="0"/></td>
+              </tr>
+            </td>
+          </tr>
+
+          <tr>
+            <td><input name="exercise7" value="Exercise 7:  "/>
+              <tr>
+                <td>&nbsp;Weight:</td>
+                <td><input name="ex7wt1" value="0"/></td>
+                <td><input name="ex7wt2" value="0"/></td>
+                <td><input name="ex7wt3" value="0"/></td>
+                <td><input name="ex7wt4" value="0"/></td>
+                <td><input name="ex7wt5" value="0"/></td>
+                <td><input name="ex7wt6" value="0"/></td>
+              </tr>
+              <tr>
+                <td>&nbsp;Reps:</td>
+                <td><input name="ex7rp1" value="0"/></td>
+                <td><input name="ex7rp2" value="0"/></td>
+                <td><input name="ex7rp3" value="0"/></td>
+                <td><input name="ex7rp4" value="0"/></td>
+                <td><input name="ex7rp5" value="0"/></td>
+                <td><input name="ex7rp6" value="0"/></td>
+              </tr>
+            </td>
+          </tr>
+
+          <tr>
+            <td><input name="exercise8" value="Exercise 8: "/>
+              <tr>
+                <td>&nbsp;Weight:</td>
+                <td><input name="ex8wt1" value="0"/></td>
+                <td><input name="ex8wt2" value="0"/></td>
+                <td><input name="ex8wt3" value="0"/></td>
+                <td><input name="ex8wt4" value="0"/></td>
+                <td><input name="ex8wt5" value="0"/></td>
+                <td><input name="ex8wt6" value="0"/></td>
+              </tr>
+              <tr>
+                <td>&nbsp;Reps:</td>
+                <td><input name="ex8rp1" value="0"/></td>
+                <td><input name="ex8rp2" value="0"/></td>
+                <td><input name="ex8rp3" value="0"/></td>
+                <td><input name="ex8rp4" value="0"/></td>
+                <td><input name="ex8rp5" value="0"/></td>
+                <td><input name="ex8rp6" value="0"/></td>
+              </tr>
+            </td>
+          </tr>
+        </table>
+        <br>
+        <br>
+        <label for="notes">Notes:</label>
+        <input id="notes" name="notes" value="Add notes about your workout here"/>
+        <br>
+        <br>
+        <input type="hidden" name="user" value="<%= user[0]._id %>"/>
+
+        <button type="submit">Create Workout</button>
+      </form>
+
+    </div>
+  </body>
+</html>

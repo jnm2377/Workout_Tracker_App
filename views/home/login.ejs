@@ -5,7 +5,7 @@
   </head>
   <body>
     <% include ../partials/header %>
-    
+
     <div class="container container-fluid">
       <% if (message) { %>
         <%= message %>
@@ -13,11 +13,6 @@
       <br>
 
       <h3>Sign In</h3>
-      <%# <form action = "/user/login" method="post">
-        Username: <input name="username"/><br>
-        Password: <input name="password"/></br>
-        <button type="submit">Login</button>
-      </form>%>
 
       <form action = "/user/login" method="post">
         <div class="form-group">
@@ -34,13 +29,6 @@
       <br>
 
       <h3>Register</h3>
-      <%# <form action="/user/register" method="post">
-        Name: <input name="name" required/><br>
-        Lastname: <input name="lastname"/><br>
-        Username: <input name="username" required/><br>
-        Password: <input name="password" required/><br>
-        <button type="submit">Register</button>
-      </form>%>
 
       <form action = "/user/register" method="post">
         <div class="form-group">
