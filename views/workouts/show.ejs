@@ -14,193 +14,201 @@
         <h4>Date: <small><%= workout.date %></small></h2>
         <h4>Notes: <small><%= workout.notes %></small></h2>
         <br>
+        <p> <a class="btn btn-primary" href="/workout_tracker/workouts/<%= workout._id %>/edit" role="button">Edit Workout</a> </p>
+
       </div>
 
       <table class="workout-show-table">
         <tr>
-          <td class="exercise">Exercise 1:
+          <td class="exercise"><%= workout.exercise1.name %>
             <tr class="table-row">
-              <td>&nbsp;weight</td>
-              <td>&nbsp;s1</td>
-              <td>&nbsp;s2</td>
-              <td>&nbsp;s3</td>
-              <td>&nbsp;s4</td>
-              <td>&nbsp;s5</td>
-              <td>&nbsp;s6</td>
+              <td>&nbsp;Weight:</td>
+              <td>&nbsp;<%= workout.exercise1.weight[0] %></td>
+              <td>&nbsp;<%= workout.exercise1.weight[1] %></td>
+              <td>&nbsp;<%= workout.exercise1.weight[2] %></td>
+              <td>&nbsp;<%= workout.exercise1.weight[3] %></td>
+              <td>&nbsp;<%= workout.exercise1.weight[4] %></td>
+              <td>&nbsp;<%= workout.exercise1.weight[5] %></td>
             </tr>
             <tr class="table-row">
-              <td>&nbsp;reps</td>
-              <td>&nbsp;0</td>
-              <td>&nbsp;0</td>
-              <td>&nbsp;0</td>
-              <td>&nbsp;0</td>
-              <td>&nbsp;0</td>
-              <td>&nbsp;0</td>
-            </tr>
-          </td>
-        </tr>
-
-        <tr>
-          <td class="exercise">Exercise 2:
-            <tr class="table-row">
-              <td>&nbsp;weight</td>
-              <td>&nbsp;s1</td>
-              <td>&nbsp;s2</td>
-              <td>&nbsp;s3</td>
-              <td>&nbsp;s4</td>
-              <td>&nbsp;s5</td>
-              <td>&nbsp;s6</td>
-            </tr>
-            <tr class="table-row">
-              <td>&nbsp;reps</td>
-              <td>&nbsp;0</td>
-              <td>&nbsp;0</td>
-              <td>&nbsp;0</td>
-              <td>&nbsp;0</td>
-              <td>&nbsp;0</td>
-              <td>&nbsp;0</td>
+              <td>&nbsp;Reps:</td>
+              <td>&nbsp;<%= workout.exercise1.reps[0] %></td>
+              <td>&nbsp;<%= workout.exercise1.reps[1] %></td>
+              <td>&nbsp;<%= workout.exercise1.reps[2] %></td>
+              <td>&nbsp;<%= workout.exercise1.reps[3] %></td>
+              <td>&nbsp;<%= workout.exercise1.reps[4] %></td>
+              <td>&nbsp;<%= workout.exercise1.reps[5] %></td>
             </tr>
           </td>
         </tr>
 
         <tr>
-          <td class="exercise">Exercise 3:
+          <td class="exercise"><%= workout.exercise2.name %>
             <tr class="table-row">
-              <td>&nbsp;weight</td>
-              <td>&nbsp;s1</td>
-              <td>&nbsp;s2</td>
-              <td>&nbsp;s3</td>
-              <td>&nbsp;s4</td>
-              <td>&nbsp;s5</td>
-              <td>&nbsp;s6</td>
+              <td>&nbsp;Weight:</td>
+              <td>&nbsp;<%= workout.exercise2.weight[0] %></td>
+              <td>&nbsp;<%= workout.exercise2.weight[1] %></td>
+              <td>&nbsp;<%= workout.exercise2.weight[2] %></td>
+              <td>&nbsp;<%= workout.exercise2.weight[3] %></td>
+              <td>&nbsp;<%= workout.exercise2.weight[4] %></td>
+              <td>&nbsp;<%= workout.exercise2.weight[5] %></td>
             </tr>
             <tr class="table-row">
-              <td>&nbsp;reps</td>
-              <td>&nbsp;0</td>
-              <td>&nbsp;0</td>
-              <td>&nbsp;0</td>
-              <td>&nbsp;0</td>
-              <td>&nbsp;0</td>
-              <td>&nbsp;0</td>
-            </tr>
-          </td>
-        </tr>
-
-        <tr>
-          <td class="exercise">Exercise 4:
-            <tr class="table-row">
-              <td>&nbsp;weight</td>
-              <td>&nbsp;s1</td>
-              <td>&nbsp;s2</td>
-              <td>&nbsp;s3</td>
-              <td>&nbsp;s4</td>
-              <td>&nbsp;s5</td>
-              <td>&nbsp;s6</td>
-            </tr>
-            <tr class="table-row">
-              <td>&nbsp;reps</td>
-              <td>&nbsp;0</td>
-              <td>&nbsp;0</td>
-              <td>&nbsp;0</td>
-              <td>&nbsp;0</td>
-              <td>&nbsp;0</td>
-              <td>&nbsp;0</td>
+              <td>&nbsp;Reps:</td>
+              <td>&nbsp;<%= workout.exercise2.reps[0] %></td>
+              <td>&nbsp;<%= workout.exercise2.reps[1] %></td>
+              <td>&nbsp;<%= workout.exercise2.reps[2] %></td>
+              <td>&nbsp;<%= workout.exercise2.reps[3] %></td>
+              <td>&nbsp;<%= workout.exercise2.reps[4] %></td>
+              <td>&nbsp;<%= workout.exercise2.reps[5] %></td>
             </tr>
           </td>
         </tr>
 
         <tr>
-          <td class="exercise">Exercise 5:
+          <td class="exercise"><%= workout.exercise3.name %>
             <tr class="table-row">
-              <td>&nbsp;weight</td>
-              <td>&nbsp;s1</td>
-              <td>&nbsp;s2</td>
-              <td>&nbsp;s3</td>
-              <td>&nbsp;s4</td>
-              <td>&nbsp;s5</td>
-              <td>&nbsp;s6</td>
+              <td>&nbsp;Weight:</td>
+              <td>&nbsp;<%= workout.exercise3.weight[0] %></td>
+              <td>&nbsp;<%= workout.exercise3.weight[1] %></td>
+              <td>&nbsp;<%= workout.exercise3.weight[2] %></td>
+              <td>&nbsp;<%= workout.exercise3.weight[3] %></td>
+              <td>&nbsp;<%= workout.exercise3.weight[4] %></td>
+              <td>&nbsp;<%= workout.exercise3.weight[5] %></td>
             </tr>
             <tr class="table-row">
-              <td>&nbsp;reps</td>
-              <td>&nbsp;0</td>
-              <td>&nbsp;0</td>
-              <td>&nbsp;0</td>
-              <td>&nbsp;0</td>
-              <td>&nbsp;0</td>
-              <td>&nbsp;0</td>
-            </tr>
-          </td>
-        </tr>
-
-        <tr>
-          <td class="exercise">Exercise 6:
-            <tr class="table-row">
-              <td>&nbsp;weight</td>
-              <td>&nbsp;s1</td>
-              <td>&nbsp;s2</td>
-              <td>&nbsp;s3</td>
-              <td>&nbsp;s4</td>
-              <td>&nbsp;s5</td>
-              <td>&nbsp;s6</td>
-            </tr>
-            <tr class="table-row">
-              <td>&nbsp;reps</td>
-              <td>&nbsp;0</td>
-              <td>&nbsp;0</td>
-              <td>&nbsp;0</td>
-              <td>&nbsp;0</td>
-              <td>&nbsp;0</td>
-              <td>&nbsp;0</td>
+              <td>&nbsp;Reps:</td>
+              <td>&nbsp;<%= workout.exercise3.reps[0] %></td>
+              <td>&nbsp;<%= workout.exercise3.reps[1] %></td>
+              <td>&nbsp;<%= workout.exercise3.reps[2] %></td>
+              <td>&nbsp;<%= workout.exercise3.reps[3] %></td>
+              <td>&nbsp;<%= workout.exercise3.reps[4] %></td>
+              <td>&nbsp;<%= workout.exercise3.reps[5] %></td>
             </tr>
           </td>
         </tr>
 
         <tr>
-          <td class="exercise">Exercise 7:
+          <td class="exercise"><%= workout.exercise4.name %>
             <tr class="table-row">
-              <td>&nbsp;weight</td>
-              <td>&nbsp;s1</td>
-              <td>&nbsp;s2</td>
-              <td>&nbsp;s3</td>
-              <td>&nbsp;s4</td>
-              <td>&nbsp;s5</td>
-              <td>&nbsp;s6</td>
+              <td>&nbsp;Weight:</td>
+              <td>&nbsp;<%= workout.exercise4.weight[0] %></td>
+              <td>&nbsp;<%= workout.exercise4.weight[1] %></td>
+              <td>&nbsp;<%= workout.exercise4.weight[2] %></td>
+              <td>&nbsp;<%= workout.exercise4.weight[3] %></td>
+              <td>&nbsp;<%= workout.exercise4.weight[4] %></td>
+              <td>&nbsp;<%= workout.exercise4.weight[5] %></td>
             </tr>
             <tr class="table-row">
-              <td>&nbsp;reps</td>
-              <td>&nbsp;0</td>
-              <td>&nbsp;0</td>
-              <td>&nbsp;0</td>
-              <td>&nbsp;0</td>
-              <td>&nbsp;0</td>
-              <td>&nbsp;0</td>
+              <td>&nbsp;Reps:</td>
+              <td>&nbsp;<%= workout.exercise4.reps[0] %></td>
+              <td>&nbsp;<%= workout.exercise4.reps[1] %></td>
+              <td>&nbsp;<%= workout.exercise4.reps[2] %></td>
+              <td>&nbsp;<%= workout.exercise4.reps[3] %></td>
+              <td>&nbsp;<%= workout.exercise4.reps[4] %></td>
+              <td>&nbsp;<%= workout.exercise4.reps[5] %></td>
             </tr>
           </td>
         </tr>
 
         <tr>
-          <td class="exercise">Exercise 8:
+          <td class="exercise"><%= workout.exercise5.name %>
             <tr class="table-row">
-              <td>&nbsp;weight</td>
-              <td>&nbsp;s1</td>
-              <td>&nbsp;s2</td>
-              <td>&nbsp;s3</td>
-              <td>&nbsp;s4</td>
-              <td>&nbsp;s5</td>
-              <td>&nbsp;s6</td>
+              <td>&nbsp;Weight:</td>
+              <td>&nbsp;<%= workout.exercise5.weight[0] %></td>
+              <td>&nbsp;<%= workout.exercise5.weight[1] %></td>
+              <td>&nbsp;<%= workout.exercise5.weight[2] %></td>
+              <td>&nbsp;<%= workout.exercise5.weight[3] %></td>
+              <td>&nbsp;<%= workout.exercise5.weight[4] %></td>
+              <td>&nbsp;<%= workout.exercise5.weight[5] %></td>
             </tr>
             <tr class="table-row">
-              <td>&nbsp;reps</td>
-              <td>&nbsp;0</td>
-              <td>&nbsp;0</td>
-              <td>&nbsp;0</td>
-              <td>&nbsp;0</td>
-              <td>&nbsp;0</td>
-              <td>&nbsp;0</td>
+              <td>&nbsp;Reps:</td>
+              <td>&nbsp;<%= workout.exercise5.reps[0] %></td>
+              <td>&nbsp;<%= workout.exercise5.reps[1] %></td>
+              <td>&nbsp;<%= workout.exercise5.reps[2] %></td>
+              <td>&nbsp;<%= workout.exercise5.reps[3] %></td>
+              <td>&nbsp;<%= workout.exercise5.reps[4] %></td>
+              <td>&nbsp;<%= workout.exercise5.reps[5] %></td>
+            </tr>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="exercise"><%= workout.exercise6.name %>
+            <tr class="table-row">
+              <td>&nbsp;Weight:</td>
+              <td>&nbsp;<%= workout.exercise6.weight[0] %></td>
+              <td>&nbsp;<%= workout.exercise6.weight[1] %></td>
+              <td>&nbsp;<%= workout.exercise6.weight[2] %></td>
+              <td>&nbsp;<%= workout.exercise6.weight[3] %></td>
+              <td>&nbsp;<%= workout.exercise6.weight[4] %></td>
+              <td>&nbsp;<%= workout.exercise6.weight[5] %></td>
+            </tr>
+            <tr class="table-row">
+              <td>&nbsp;Reps:</td>
+              <td>&nbsp;<%= workout.exercise6.reps[0] %></td>
+              <td>&nbsp;<%= workout.exercise6.reps[1] %></td>
+              <td>&nbsp;<%= workout.exercise6.reps[2] %></td>
+              <td>&nbsp;<%= workout.exercise6.reps[3] %></td>
+              <td>&nbsp;<%= workout.exercise6.reps[4] %></td>
+              <td>&nbsp;<%= workout.exercise6.reps[5] %></td>
+            </tr>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="exercise"><%= workout.exercise7.name %>
+            <tr class="table-row">
+              <td>&nbsp;Weight:</td>
+              <td>&nbsp;<%= workout.exercise7.weight[0] %></td>
+              <td>&nbsp;<%= workout.exercise7.weight[1] %></td>
+              <td>&nbsp;<%= workout.exercise7.weight[2] %></td>
+              <td>&nbsp;<%= workout.exercise7.weight[3] %></td>
+              <td>&nbsp;<%= workout.exercise7.weight[4] %></td>
+              <td>&nbsp;<%= workout.exercise7.weight[5] %></td>
+            </tr>
+            <tr class="table-row">
+              <td>&nbsp;Reps:</td>
+              <td>&nbsp;<%= workout.exercise7.reps[0] %></td>
+              <td>&nbsp;<%= workout.exercise7.reps[1] %></td>
+              <td>&nbsp;<%= workout.exercise7.reps[2] %></td>
+              <td>&nbsp;<%= workout.exercise7.reps[3] %></td>
+              <td>&nbsp;<%= workout.exercise7.reps[4] %></td>
+              <td>&nbsp;<%= workout.exercise7.reps[5] %></td>
+            </tr>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="exercise"><%= workout.exercise8.name %>
+            <tr class="table-row">
+              <td>&nbsp;Weight:</td>
+              <td>&nbsp;<%= workout.exercise8.weight[0] %></td>
+              <td>&nbsp;<%= workout.exercise8.weight[1] %></td>
+              <td>&nbsp;<%= workout.exercise8.weight[2] %></td>
+              <td>&nbsp;<%= workout.exercise8.weight[3] %></td>
+              <td>&nbsp;<%= workout.exercise8.weight[4] %></td>
+              <td>&nbsp;<%= workout.exercise8.weight[5] %></td>
+            </tr>
+            <tr class="table-row">
+              <td>&nbsp;Reps:</td>
+              <td>&nbsp;<%= workout.exercise8.reps[0] %></td>
+              <td>&nbsp;<%= workout.exercise8.reps[1] %></td>
+              <td>&nbsp;<%= workout.exercise8.reps[2] %></td>
+              <td>&nbsp;<%= workout.exercise8.reps[3] %></td>
+              <td>&nbsp;<%= workout.exercise8.reps[4] %></td>
+              <td>&nbsp;<%= workout.exercise8.reps[5] %></td>
             </tr>
           </td>
         </tr>
       </table>
+
+      <div class="delete-container">
+        <form action="/workout_tracker/workouts/<%= workout._id %>?_method=DELETE" method="post">
+          <input type="button" class="btn btn-danger" value="Delete Workout"/>
+        </form>
+      </div>
     </div>
   </body>
 </html>

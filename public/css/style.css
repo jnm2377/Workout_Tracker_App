@@ -86,6 +86,7 @@ body {
 
 input {
   width: 100%;
+  color: black;
 }
 
 /********************************************
@@ -147,4 +148,9 @@ input {
 .table-row > td {
   width: 75px;
   border: 1px solid  #5a5a5a;
+}
+
+.delete-container {
+  width: 15%;
+  margin: 70px auto;
 }

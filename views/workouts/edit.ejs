@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% include ../partials/head %>
+  </head>
+  <body>
+    <% include ../partials/header %>
+
+    <div class="container container-fluid">
+      <h3>Update Workout</h3>
+
+      <form action = "/workout_tracker/workouts/<%= workout._id; %>?_method=PUT" method="post">
+        <label for="workout">Workout:</label>
+        <input id="workout" name="workout" value="<%= workout.workout %>"/>
+        <label for="date">Date:</label>
+        <input id="date" name="date" type="date" value="<%= workout.date %>"/>
+        <br>
+        <br>
+        <table>
+          <tr>
+            <td><input name="exercise1" value="<%= workout.exercise1.name %>"/>
+              <tr>
+                <td>&nbsp;Weight:</td>
+                <td><input name="ex1wt1" value="<%= workout.exercise1.weight[0] %>"/></td>
+                <td><input name="ex1wt2" value="<%= workout.exercise1.weight[1] %>"/></td>
+                <td><input name="ex1wt3" value="<%= workout.exercise1.weight[2] %>"/></td>
+                <td><input name="ex1wt4" value="<%= workout.exercise1.weight[3] %>"/></td>
+                <td><input name="ex1wt5" value="<%= workout.exercise1.weight[4] %>"/></td>
+                <td><input name="ex1wt6" value="<%= workout.exercise1.weight[5] %>"/></td>
+              </tr>
+              <tr>
+                <td>&nbsp;Reps:</td>
+                <td><input name="ex1rp1" value="<%= workout.exercise1.reps[0] %>"/></td>
+                <td><input name="ex1rp2" value="<%= workout.exercise1.reps[1] %>"/></td>
+                <td><input name="ex1rp3" value="<%= workout.exercise1.reps[2] %>"/></td>
+                <td><input name="ex1rp4" value="<%= workout.exercise1.reps[3] %>"/></td>
+                <td><input name="ex1rp5" value="<%= workout.exercise1.reps[4] %>"/></td>
+                <td><input name="ex1rp6" value="<%= workout.exercise1.reps[5] %>"/></td>
+              </tr>
+            </td>
+          </tr>
+
+          <tr>
+            <td><input name="exercise2" value="<%= workout.exercise2.name %>"/>
+              <tr>
+                <td>&nbsp;Weight:</td>
+                <td><input name="ex2wt1" value="<%= workout.exercise2.weight[0] %>"/></td>
+                <td><input name="ex2wt2" value="<%= workout.exercise2.weight[1] %>"/></td>
+                <td><input name="ex2wt3" value="<%= workout.exercise2.weight[2] %>"/></td>
+                <td><input name="ex2wt4" value="<%= workout.exercise2.weight[3] %>"/></td>
+                <td><input name="ex2wt5" value="<%= workout.exercise2.weight[4] %>"/></td>
+                <td><input name="ex2wt6" value="<%= workout.exercise2.weight[5] %>"/></td>
+              </tr>
+              <tr>
+                <td>&nbsp;Reps:</td>
+                <td><input name="ex2rp1" value="<%= workout.exercise2.reps[0] %>"/></td>
+                <td><input name="ex2rp2" value="<%= workout.exercise2.reps[1] %>"/></td>
+                <td><input name="ex2rp3" value="<%= workout.exercise2.reps[2] %>"/></td>
+                <td><input name="ex2rp4" value="<%= workout.exercise2.reps[3] %>"/></td>
+                <td><input name="ex2rp5" value="<%= workout.exercise2.reps[4] %>"/></td>
+                <td><input name="ex2rp6" value="<%= workout.exercise2.reps[5] %>"/></td>
+              </tr>
+            </td>
+          </tr>
+
+          <tr>
+            <td><input name="exercise3" value="<%= workout.exercise3.name %>"/>
+              <tr>
+                <td>&nbsp;Weight:</td>
+                <td><input name="ex3wt1" value="<%= workout.exercise3.weight[0] %>"/></td>
+                <td><input name="ex3wt2" value="<%= workout.exercise3.weight[1] %>"/></td>
+                <td><input name="ex3wt3" value="<%= workout.exercise3.weight[2] %>"/></td>
+                <td><input name="ex3wt4" value="<%= workout.exercise3.weight[3] %>"/></td>
+                <td><input name="ex3wt5" value="<%= workout.exercise3.weight[4] %>"/></td>
+                <td><input name="ex3wt6" value="<%= workout.exercise3.weight[5] %>"/></td>
+              </tr>
+              <tr>
+                <td>&nbsp;Reps:</td>
+                <td><input name="ex3rp1" value="<%= workout.exercise3.reps[0] %>"/></td>
+                <td><input name="ex3rp2" value="<%= workout.exercise3.reps[1] %>"/></td>
+                <td><input name="ex3rp3" value="<%= workout.exercise3.reps[2] %>"/></td>
+                <td><input name="ex3rp4" value="<%= workout.exercise3.reps[3] %>"/></td>
+                <td><input name="ex3rp5" value="<%= workout.exercise3.reps[4] %>"/></td>
+                <td><input name="ex3rp6" value="<%= workout.exercise3.reps[5] %>"/></td>
+              </tr>
+            </td>
+          </tr>
+
+          <tr>
+            <td><input name="exercise4" value="<%= workout.exercise4.name %>"/>
+              <tr>
+                <td>&nbsp;Weight:</td>
+                <td><input name="ex4wt1" value="<%= workout.exercise4.weight[0] %>"/></td>
+                <td><input name="ex4wt2" value="<%= workout.exercise4.weight[1] %>"/></td>
+                <td><input name="ex4wt3" value="<%= workout.exercise4.weight[2] %>"/></td>
+                <td><input name="ex4wt4" value="<%= workout.exercise4.weight[3] %>"/></td>
+                <td><input name="ex4wt5" value="<%= workout.exercise4.weight[4] %>"/></td>
+                <td><input name="ex4wt6" value="<%= workout.exercise4.weight[5] %>"/></td>
+              </tr>
+              <tr>
+                <td>&nbsp;Reps:</td>
+                <td><input name="ex4rp1" value="<%= workout.exercise4.reps[0] %>"/></td>
+                <td><input name="ex4rp2" value="<%= workout.exercise4.reps[1] %>"/></td>
+                <td><input name="ex4rp3" value="<%= workout.exercise4.reps[2] %>"/></td>
+                <td><input name="ex4rp4" value="<%= workout.exercise4.reps[3] %>"/></td>
+                <td><input name="ex4rp5" value="<%= workout.exercise4.reps[4] %>"/></td>
+                <td><input name="ex4rp6" value="<%= workout.exercise4.reps[5] %>"/></td>
+              </tr>
+            </td>
+          </tr>
+
+          <tr>
+            <td><input name="exercise5" value="<%= workout.exercise5.name %>"/>
+              <tr>
+                <td>&nbsp;Weight:</td>
+                <td><input name="ex5wt1" value="<%= workout.exercise5.weight[0] %>"/></td>
+                <td><input name="ex5wt2" value="<%= workout.exercise5.weight[1] %>"/></td>
+                <td><input name="ex5wt3" value="<%= workout.exercise5.weight[2] %>"/></td>
+                <td><input name="ex5wt4" value="<%= workout.exercise5.weight[3] %>"/></td>
+                <td><input name="ex5wt5" value="<%= workout.exercise5.weight[4] %>"/></td>
+                <td><input name="ex5wt6" value="<%= workout.exercise5.weight[5] %>"/></td>
+              </tr>
+              <tr>
+                <td>&nbsp;Reps:</td>
+                <td><input name="ex5rp1" value="<%= workout.exercise5.reps[0] %>"/></td>
+                <td><input name="ex5rp2" value="<%= workout.exercise5.reps[1] %>"/></td>
+                <td><input name="ex5rp3" value="<%= workout.exercise5.reps[2] %>"/></td>
+                <td><input name="ex5rp4" value="<%= workout.exercise5.reps[3] %>"/></td>
+                <td><input name="ex5rp5" value="<%= workout.exercise5.reps[4] %>"/></td>
+                <td><input name="ex5rp6" value="<%= workout.exercise5.reps[5] %>"/></td>
+              </tr>
+            </td>
+          </tr>
+
+          <tr>
+            <td><input name="exercise6" value="<%= workout.exercise6.name %>"/>
+              <tr>
+                <td>&nbsp;Weight:</td>
+                <td><input name="ex6wt1" value="<%= workout.exercise6.weight[0] %>"/></td>
+                <td><input name="ex6wt2" value="<%= workout.exercise6.weight[1] %>"/></td>
+                <td><input name="ex6wt3" value="<%= workout.exercise6.weight[2] %>"/></td>
+                <td><input name="ex6wt4" value="<%= workout.exercise6.weight[3] %>"/></td>
+                <td><input name="ex6wt5" value="<%= workout.exercise6.weight[4] %>"/></td>
+                <td><input name="ex6wt6" value="<%= workout.exercise6.weight[5] %>"/></td>
+              </tr>
+              <tr>
+                <td>&nbsp;Reps:</td>
+                <td><input name="ex6rp1" value="<%= workout.exercise6.reps[0] %>"/></td>
+                <td><input name="ex6rp2" value="<%= workout.exercise6.reps[1] %>"/></td>
+                <td><input name="ex6rp3" value="<%= workout.exercise6.reps[2] %>"/></td>
+                <td><input name="ex6rp4" value="<%= workout.exercise6.reps[3] %>"/></td>
+                <td><input name="ex6rp5" value="<%= workout.exercise6.reps[4] %>"/></td>
+                <td><input name="ex6rp6" value="<%= workout.exercise6.reps[5] %>"/></td>
+              </tr>
+            </td>
+          </tr>
+
+          <tr>
+            <td><input name="exercise7" value="<%= workout.exercise7.name %>"/>
+              <tr>
+                <td>&nbsp;Weight:</td>
+                <td><input name="ex7wt1" value="<%= workout.exercise7.weight[0] %>"/></td>
+                <td><input name="ex7wt2" value="<%= workout.exercise7.weight[1] %>"/></td>
+                <td><input name="ex7wt3" value="<%= workout.exercise7.weight[2] %>"/></td>
+                <td><input name="ex7wt4" value="<%= workout.exercise7.weight[3] %>"/></td>
+                <td><input name="ex7wt5" value="<%= workout.exercise7.weight[4] %>"/></td>
+                <td><input name="ex7wt6" value="<%= workout.exercise7.weight[5] %>"/></td>
+              </tr>
+              <tr>
+                <td>&nbsp;Reps:</td>
+                <td><input name="ex7rp1" value="<%= workout.exercise7.reps[0] %>"/></td>
+                <td><input name="ex7rp2" value="<%= workout.exercise7.reps[1] %>"/></td>
+                <td><input name="ex7rp3" value="<%= workout.exercise7.reps[2] %>"/></td>
+                <td><input name="ex7rp4" value="<%= workout.exercise7.reps[3] %>"/></td>
+                <td><input name="ex7rp5" value="<%= workout.exercise7.reps[4] %>"/></td>
+                <td><input name="ex7rp6" value="<%= workout.exercise7.reps[5] %>"/></td>
+              </tr>
+            </td>
+          </tr>
+
+          <tr>
+            <td><input name="exercise8" value="<%= workout.exercise8.name %>"/>
+              <tr>
+                <td>&nbsp;Weight:</td>
+                <td><input name="ex8wt1" value="<%= workout.exercise8.weight[0] %>"/></td>
+                <td><input name="ex8wt2" value="<%= workout.exercise8.weight[1] %>"/></td>
+                <td><input name="ex8wt3" value="<%= workout.exercise8.weight[2] %>"/></td>
+                <td><input name="ex8wt4" value="<%= workout.exercise8.weight[3] %>"/></td>
+                <td><input name="ex8wt5" value="<%= workout.exercise8.weight[4] %>"/></td>
+                <td><input name="ex8wt6" value="<%= workout.exercise8.weight[5] %>"/></td>
+              </tr>
+              <tr>
+                <td>&nbsp;Reps:</td>
+                <td><input name="ex8rp1" value="<%= workout.exercise8.reps[0] %>"/></td>
+                <td><input name="ex8rp2" value="<%= workout.exercise8.reps[1] %>"/></td>
+                <td><input name="ex8rp3" value="<%= workout.exercise8.reps[2] %>"/></td>
+                <td><input name="ex8rp4" value="<%= workout.exercise8.reps[3] %>"/></td>
+                <td><input name="ex8rp5" value="<%= workout.exercise8.reps[4] %>"/></td>
+                <td><input name="ex8rp6" value="<%= workout.exercise8.reps[5] %>"/></td>
+              </tr>
+            </td>
+          </tr>
+        </table>
+        <br>
+        <br>
+        <label for="notes">Notes:</label>
+        <input id="notes" name="notes" value="<%= workout.notes %>"/>
+        <br>
+        <br>
+        <input type="hidden" name="user" value="<%= user[0]._id %>"/>
+
+        <button class="btn btn-primary" type="submit">Save Changes</button>
+      </form>
+
+    </div>
+  </body>
+</html>

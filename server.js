@@ -38,6 +38,7 @@ app.use(session({
 //controllers
 const appController = require('./controllers/router.js');
 const sessionsController = require('./controllers/session.js');
+app.use(methodOverride('_method'));
 app.use('/workout_tracker', appController);
 app.use('/user', sessionsController);
 

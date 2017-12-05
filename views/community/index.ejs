@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% include ../partials/head %>
+  </head>
+  <body>
+    <% include ../partials/header %>
+
+
+
+
+      <div class="container container-fluid">
+        <div class="workout-show-text">
+          <h1>GymRat Community Workouts</h1>
+        </div>
+        <br>
+        <br>
+
+        <div class="jumbotron jumbo">
+
+          <% for (let i = allWorkouts.length-1; i >= 0; i--) { %>
+          <div class="thumbnail-container">
+            <a href = '/workout_tracker/community/<%= allWorkouts[i]._id %>'>
+              <div class="thumbnail">
+                <div class="caption">
+                  <h3><%= allWorkouts[i].workout %></h3>
+                  <p><%= allWorkouts[i].date %></p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <% } %>
+
+        </div>
+      </div>
+
+
+COMMUNITY WORKOUTS GO HERE
+  </body>
+</html>
