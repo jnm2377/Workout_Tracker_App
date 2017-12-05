@@ -204,14 +204,19 @@
         </tr>
       </table>
 
+      <br>
+      <hr>
+      <h4 class="workout-show-text">GymRat Comments:</h4>
+
       <div class="comments-container">
          <% for (comment of comments) { %>
              <div class="comment">
-               <p><%= comment.author %></p>
-               <p><%= comment.content %></p>
+               <p><b><%= comment.author %>:</b></p>
+               <p><i><%= comment.content %></i></p>
              </div>
            <% } %>
       </div>
+      <hr>
 
       <div class="delete-container">
         <form action="/workout_tracker/workouts/<%= workout._id %>?_method=DELETE" method="post">

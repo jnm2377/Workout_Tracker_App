@@ -151,6 +151,32 @@ input {
 }
 
 .delete-container {
-  width: 15%;
+  width: 20%;
   margin: 70px auto;
+}
+
+
+.comments-container {
+  width: 70%;
+  margin: 30px auto;
+}
+
+.comment {
+  padding: 10px;
+  border: 1px solid black;
+  background: black;
+  /*background: white;*/
+  /*color: white;*/
+  margin: 5px;
+  border-radius: 4px;
+}
+
+.comment-button {
+  width: 50%;
+}
+
+.comment-form {
+  width: 50%;
+  align-items: center;
+  margin: auto;
 }

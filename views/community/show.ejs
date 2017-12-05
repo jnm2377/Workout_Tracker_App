@@ -203,31 +203,35 @@
         </tr>
       </table>
 
+      <br>
+      <hr>
+      <h4 class="workout-show-text">GymRat Comments:</h4>
+
       <div class="comments-container">
          <% for (comment of comments) { %>
              <div class="comment">
-               <p><%= comment.author %></p>
-               <p><%= comment.content %></p>
+               <p><b><%= comment.author %>:</b></p>
+               <p><i><%= comment.content %></i></p>
              </div>
            <% } %>
       </div>
-
-      <div class="form-container">
-      <br>
-    <form action="/workout_tracker/community/<%= workout._id %>" method="POST">
-      <label for="author">Author:</label>
-      <br>
-      <input id="author" type="text" name="author"/>
-      <br>
-      <label for="content">Comment:</label>
-      <br>
-      <input id="content" type="text" name="content" required/>
-      <br>
-      <input type="hidden" name="workout" value="<%= workout._id %>"/>
-      <br>
-      <input class="button" type="submit" value="Post Comment">
-    </form>
-    <br>
+      <hr>
+      <div class="form-container comment-form">
+        <br>
+        <form action="/workout_tracker/community/<%= workout._id %>" method="POST">
+          <label for="author">Author:</label>
+          <br>
+          <input id="author" type="text" name="author"/>
+          <br>
+          <label for="content">Comment:</label>
+          <br>
+          <input id="content" type="text" name="content" required/>
+          <br>
+          <input type="hidden" name="workout" value="<%= workout._id %>"/>
+          <br>
+          <input class="btn btn-primary comment-button" type="submit" value="Post Comment">
+        </form>
+        <br>
     </div>
 
     </div>

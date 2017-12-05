@@ -405,7 +405,6 @@ router.delete('/workouts/:id', async (req, res) => {
   } catch (e) {
     console.log(e.message);
   }
-
 })
 
 // / delete route EXAMPLE
