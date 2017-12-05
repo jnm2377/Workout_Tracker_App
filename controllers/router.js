@@ -5,9 +5,12 @@ const router = express.Router();
 // require models
 const User = require('../models/user.js');
 const Workout = require('../models/workout.js');
+const Comment = require('../models/comment.js');
+const Pr = require('../models/pr.js');
 
 //MIDDLEWARE
 router.use(express.static('public'));
+router.use(methodOverride('_method'));
 
 //HOME route
 router.get('/home', (req, res) => {
@@ -25,7 +28,15 @@ router.get('/community', async (req, res) => {
 //COMMUNITY show
 router.get('/community/:id', async (req, res) => {
   const workout = await Workout.findById(req.params.id);
-  res.render('community/show.ejs', {workout})
+  const comments = await Comment.find({workout: workout._id});
+  console.log(workout);
+  console.log(comments);
+  res.render('community/show.ejs', {workout, comments})
+})
+
+router.post('/community/:id', async (req, res) => {
+  const newComment = await Comment.create(req.body);
+  res.redirect('back');
 })
 
 //WORKOUTS INDEX route
@@ -50,8 +61,9 @@ router.get('/workouts', async (req, res) => {
 //SHOW workout
 router.get('/workouts/:id', async (req, res) => {
   const workout = await Workout.findById(req.params.id);
+  const comments = await Comment.find({workout: req.params.id});
   // console.log(workout);
-  res.render('workouts/show.ejs', {workout});
+  res.render('workouts/show.ejs', {workout, comments});
 })
 
 
@@ -386,8 +398,10 @@ router.put('/workouts/:id', async (req, res) => {
 //DELETE workout
 router.delete('/workouts/:id', async (req, res) => {
   try {
+    // console.log('=================');
     const deleteWorkout = await Workout.findByIdAndRemove(req.params.id);
-    res.redirect('/workouts_tracker/workouts');
+    await Comment.remove({workout: deleteWorkout._id});
+    res.redirect('/workout_tracker/workouts');
   } catch (e) {
     console.log(e.message);
   }

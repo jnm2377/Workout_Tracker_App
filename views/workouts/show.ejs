@@ -204,9 +204,18 @@
         </tr>
       </table>
 
+      <div class="comments-container">
+         <% for (comment of comments) { %>
+             <div class="comment">
+               <p><%= comment.author %></p>
+               <p><%= comment.content %></p>
+             </div>
+           <% } %>
+      </div>
+
       <div class="delete-container">
         <form action="/workout_tracker/workouts/<%= workout._id %>?_method=DELETE" method="post">
-          <input type="button" class="btn btn-danger" value="Delete Workout"/>
+          <input type="submit" class="btn btn-danger" value="Delete Workout"/>
         </form>
       </div>
     </div>
