@@ -72,3 +72,31 @@ body {
 input {
   width: 100%;
 }
+
+.workouts {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.thumbnail-container {
+  width: 20%;
+}
+
+.thumbnail-container > .thumbnail {
+  background: #5a5a5a;
+  border: 1px solid #5a5a5a;
+}
+
+.thumbnail-container > .thumbnail:hover {
+  background: #5a5a5a;
+  border: 2px solid white;
+}
+
+.thumbnail-container > .thumbnail > .caption > h3 {
+  color: white;
+}
+
+.thumbnail-container > .thumbnail > .caption > p {
+  color: white;
+}
