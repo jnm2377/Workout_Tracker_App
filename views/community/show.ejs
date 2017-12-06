@@ -21,7 +21,7 @@
         <div class="community-comments-container">
            <% for (comment of comments) { %>
                <div class="comment">
-                 <p><b><%= comment.author %>:</b></p>
+                 <p><b><%= loggedUser[0].username %>:</b></p>
                  <p><i><%= comment.content %></i></p>
                </div>
              <% } %>
@@ -233,10 +233,6 @@
       <div class="form-container comment-form">
         <br>
         <form action="/workout_tracker/community/<%= workout._id %>" method="POST">
-          <label for="author">Author:</label>
-          <br>
-          <input id="author" type="text" name="author"/>
-          <br>
           <label for="content">Comment:</label>
           <br>
           <input id="content" type="text" name="content" required/>

@@ -44,7 +44,8 @@ const WorkoutSchema = new mongoose.Schema({
     weight: [],
     reps: [],
   },
-  user: { type: mongoose.Schema.Types.ObjectId, ref: 'User'}
+  user: { type: mongoose.Schema.Types.ObjectId, ref: 'User'},
+  name: String,
 })
 
 module.exports = mongoose.model('WorkoutSchema', WorkoutSchema)

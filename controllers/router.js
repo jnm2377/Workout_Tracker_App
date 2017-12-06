@@ -20,8 +20,8 @@ router.get('/home', (req, res) => {
 
 //COMMUNITY index
 router.get('/community', async (req, res) => {
-  const allWorkouts = await Workout.find();
-  // console.log(allWorkouts);
+  const allWorkouts = await Workout.find().populate('userSchema');
+  console.log(allWorkouts);
   res.render('community/index.ejs', {allWorkouts, logged: req.session.logged})
 })
 
@@ -32,8 +32,10 @@ router.get('/community/:id', async (req, res) => {
   // console.log(workout);
   // console.log(comments);
   const user = await User.find({_id: workout.user});
+  const loggedUser = await User.find({username: req.session.username});
   console.log(user);
-  res.render('community/show.ejs', {workout, comments, user, logged: req.session.logged})
+  console.log(loggedUser);
+  res.render('community/show.ejs', {workout, comments, user, loggedUser, logged: req.session.logged})
 })
 
 router.post('/community/:id', async (req, res) => {
@@ -85,6 +87,7 @@ router.post('/workouts', async (req, res) => {
   workoutObj.date = req.body.date;
   workoutObj.notes = req.body.notes;
   workoutObj.user = req.body.user;
+  workoutObj.name = req.body.name;
   workoutObj.exercise1 = {};
   workoutObj.exercise1.name = req.body.exercise1;
   //EXERCISE 1
@@ -249,6 +252,7 @@ router.put('/workouts/:id', async (req, res) => {
   workoutObj.date = req.body.date;
   workoutObj.notes = req.body.notes;
   workoutObj.user = req.body.user;
+  workoutObj.name = req.body.name;
   workoutObj.exercise1 = {};
   workoutObj.exercise1.name = req.body.exercise1;
   //EXERCISE 1
