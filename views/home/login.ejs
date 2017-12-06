@@ -8,7 +8,11 @@
 
     <div class="container container-fluid">
       <% if (message) { %>
-        <%= message %>
+        <button class="btn btn-danger"><%= message %></button>
+      <% } %>
+
+      <% if (registerMessage) { %>
+        <button class="btn btn-danger"><%= registerMessage %></button>
       <% } %>
       <br>
 

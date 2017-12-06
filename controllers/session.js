@@ -7,7 +7,9 @@ const User = require('../models/user.js');
 //LOGIN PAGE
 router.get('/login', (req, res) => {
   res.render('home/login.ejs', {
-    message: req.session.message
+    message: req.session.message,
+    registerMessage: req.session.registerMessage
+
   });
 })
 
@@ -41,31 +43,40 @@ router.post('/login', async (req, res) => {
 // name = password
 // name = username
 router.post('/register', async (req, res) => {
-  const password = req.body.password;
-  const passwordHash = bcrypt.hashSync(password, bcrypt.genSaltSync(10));
-  const username = req.body.username;
-  const name = req.body.name;
-  const lastname = req.body.lastname;
-  const userDbEntry = {}; //creating user obj with user name/pass
+  const users = await User.find({username: req.body.username});
+  if (users.length === 0) {
+    const password = req.body.password;
+    const passwordHash = bcrypt.hashSync(password, bcrypt.genSaltSync(10));
+    const username = req.body.username;
+    const name = req.body.name;
+    const lastname = req.body.lastname;
+    const userDbEntry = {}; //creating user obj with user name/pass
 
-  userDbEntry.username = username;
-  userDbEntry.password = passwordHash;
-  userDbEntry.name = name;
-  userDbEntry.lastname = lastname;
+    userDbEntry.username = username;
+    userDbEntry.password = passwordHash;
+    userDbEntry.name = name;
+    userDbEntry.lastname = lastname;
 
-  console.log(userDbEntry);
+    console.log(userDbEntry);
 
-  try {
-    const user = await User.create(userDbEntry); //adding user obj to database with User schema
-    console.log(user);
-    req.session.username = user.username; //creating req.session variables with user variable data for router controller (what we need for workout index pg)
-    req.session.name = user.name;
-    req.session.lastname = user.lastname;
-    req.session.logged = true;
-    res.redirect('/user/login'); //redirecting for them to login
-  } catch (e) {
-    console.log(e.message);
+    try {
+      const user = await User.create(userDbEntry); //adding user obj to database with User schema
+      console.log(user);
+      req.session.username = user.username; //creating req.session variables with user variable data for router controller (what we need for workout index pg)
+      req.session.name = user.name;
+      req.session.lastname = user.lastname;
+      req.session.logged = true;
+      res.redirect('/user/login'); //redirecting for them to login
+    } catch (e) {
+      console.log(e.message);
+    }
+  } else {
+    console.log('USERNAME TAKEN!');
+    req.session.registerMessage = "Username already taken. WOMP WOMP.";
+    res.redirect('/user/login');
+
   }
+
 })
 
 
