@@ -29,9 +29,11 @@ router.get('/community', async (req, res) => {
 router.get('/community/:id', async (req, res) => {
   const workout = await Workout.findById(req.params.id);
   const comments = await Comment.find({workout: workout._id});
-  console.log(workout);
-  console.log(comments);
-  res.render('community/show.ejs', {workout, comments})
+  // console.log(workout);
+  // console.log(comments);
+  const user = await User.find({_id: workout.user});
+  console.log(user);
+  res.render('community/show.ejs', {workout, comments, user})
 })
 
 router.post('/community/:id', async (req, res) => {
@@ -44,10 +46,10 @@ router.get('/workouts', async (req, res) => {
   if(req.session.logged) {
     const user = await User.find({username: req.session.username});
     const userWorkouts = await Workout.find({user: user[0]._id});
-    console.log("================");
-    console.log(user);
-    console.log("================");
-    console.log(userWorkouts);
+    // console.log("================");
+    // console.log(user);
+    // console.log("================");
+    // console.log(userWorkouts);
     res.render('workouts/index.ejs', {
       user,
       userWorkouts
@@ -76,7 +78,7 @@ router.get('/new', async (req, res) => {
 })
 
 router.post('/workouts', async (req, res) => {
-  console.log(req.body);
+  // console.log(req.body);
   const workoutObj = {};
   workoutObj.workout = req.body.workout;
   workoutObj.date = req.body.date;

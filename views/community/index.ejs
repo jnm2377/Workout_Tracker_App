@@ -10,31 +10,29 @@
 
 
       <div class="container container-fluid">
-        <div class="workout-show-text">
-          <h1>GymRat Community Workouts</h1>
-        </div>
-        <br>
-        <br>
-
         <div class="jumbotron jumbo">
-
-          <% for (let i = allWorkouts.length-1; i >= 0; i--) { %>
-          <div class="thumbnail-container">
-            <a href = '/workout_tracker/community/<%= allWorkouts[i]._id %>'>
-              <div class="thumbnail">
-                <div class="caption">
-                  <h3><%= allWorkouts[i].workout %></h3>
-                  <p><%= allWorkouts[i].date %></p>
-                </div>
-              </div>
-            </a>
-          </div>
-          <% } %>
-
+          <h1>GymRat Community Workouts</h1>
+          <p>Welcome to a place where shaker bottles are invaluable, protein farts are a thing, most of us probably can't walk the next day after leg day, and at some point along your fitness journey you'll hate life and ask why you're doing this but you'll still wake up the next day and do it again. We're all GymRats here. Check out your fellow rats' workouts and add comments to motivate them!</p>
         </div>
+        <br>
+        <br>
+
+
+
+          <div class="container container-fluid workouts">
+            <% for (let i = allWorkouts.length-1; i >= 0; i--) { %>
+              <a href = '/workout_tracker/community/<%= allWorkouts[i]._id %>'>
+                <div class="thumbnail-container">
+                    <div id="diamond-shield">
+                    </div>
+                    <h3><%= allWorkouts[i].workout %> &nbsp;&nbsp;&nbsp;/</h3>
+                    <p><%= allWorkouts[i].date %></p>
+                </div>
+              </a>
+            <% } %>
+          </div>
       </div>
 
 
-COMMUNITY WORKOUTS GO HERE
   </body>
 </html>

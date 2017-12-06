@@ -95,31 +95,62 @@ input {
 
 .workouts {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-direction: column;
+  margin: auto;
 }
 
-.thumbnail-container {
-  width: 20%;
+.workouts > a {
+  text-decoration: none;
+  color: black;
 }
 
-.thumbnail-container > a > .thumbnail {
-  background: #5a5a5a;
-  border: 1px solid #5a5a5a;
-}
-
-.thumbnail-container > a > .thumbnail:hover {
-  background: #5a5a5a;
-  border: 2px solid white;
-}
-
-.thumbnail-container > a > .thumbnail > .caption > h3 {
+.workouts > a:hover {
   color: white;
 }
 
-.thumbnail-container > a {
-  text-decoration: none;
+.thumbnail-container {
+  width: 96%;
+  margin: 5px 0;
+  background: white;
+  display: flex;
+  flex-direction: row;
+  border-radius: 4px;
 }
+
+.thumbnail-container:hover {
+  background: #5a5a5a;
+}
+
+
+.thumbnail-container > h3 {
+  margin: 10px;
+}
+
+.thumbnail-container > p {
+  margin: 15px;
+}
+
+/*creates div that is shaped like diamond*/
+/*from css tricksv- shapes of CSS*/
+#diamond-shield {
+  margin: 9px;
+	width: 0;
+	height: 0;
+	border: 15px solid transparent;
+	border-bottom: 5px solid #337ab7;
+	position: relative;
+	top: -15px;
+}
+#diamond-shield:after {
+	content: '';
+	position: absolute;
+	left: -15px; top: 5px;
+	width: 0;
+	height: 0;
+	border: 15px solid transparent;
+	border-top: 25px solid #337ab7;
+}
+
 
 /********************************************
             WORKOUT SHOW PAGE
@@ -179,4 +210,55 @@ input {
   width: 50%;
   align-items: center;
   margin: auto;
+}
+
+
+.columns-container {
+  margin: auto;
+  /*background: white;*/
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  height: 820px;
+
+}
+
+.user-info {
+  background: #337ab7;
+  width: 38%;
+  margin: 20px;
+  border-radius: 4px;
+  overflow: scroll;
+  overflow-x: hidden;
+
+}
+
+::-webkit-scrollbar {
+    /*display: none;*/
+}
+
+.user-show-text {
+  margin: 10px;
+}
+
+#gymrat-info {
+  text-align: center;
+  color: white;
+}
+
+i {
+  color: white;
+}
+
+.community-comments-container {
+  width: 100%;
+  margin: 30px auto;
+}
+
+.community-show-text {
+  color: white;
+}
+
+.table-margin {
+  margin: 1px;
 }

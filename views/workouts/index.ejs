@@ -8,7 +8,8 @@
 
     <div class="container container-fluid">
       <div class="jumbotron jumbo">
-        <h1><small><%= user[0].name %>'s Workouts</small></h1>
+        <h1><%= user[0].name %>'s Workouts</h1>
+        <p>Hey, killer! Welcome to your space. Check out your past workouts below, and add new ones. All your posted workouts are added to the GymRat community page. We, the GymRat community, love to be an encouragement to one another in our fitness journeys. Click on GymRats to see other people's workouts and comment on them. Now go lift some heavy things and drink those protein shakes!</p>
         <br>
         <p>
           <a class="btn btn-primary btn-lg" href="/workout_tracker/new" role="button">Add Workout</a>
@@ -26,17 +27,14 @@
 
       <div class="container container-fluid workouts">
         <% for (let i = userWorkouts.length-1; i >= 0; i--) { %>
-        <div class="thumbnail-container">
           <a href = '/workout_tracker/workouts/<%= userWorkouts[i]._id %>'>
-            <div class="thumbnail">
-              <img src="https://i.imgur.com/i59633l.png?1" alt="workout link">
-              <div class="caption">
-                <h3><%= userWorkouts[i].workout %></h3>
+            <div class="thumbnail-container">
+                <div id="diamond-shield">
+                </div>
+                <h3><%= userWorkouts[i].workout %> &nbsp;&nbsp;&nbsp;/</h3>
                 <p><%= userWorkouts[i].date %></p>
-              </div>
             </div>
           </a>
-        </div>
         <% } %>
 
       </div>
