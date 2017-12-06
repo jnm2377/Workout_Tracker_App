@@ -14,7 +14,7 @@ router.use(methodOverride('_method'));
 
 //HOME route
 router.get('/home', (req, res) => {
-  res.render('home/home.ejs')
+  res.render('home/home.ejs', {logged: req.session.logged})
 });
 
 
@@ -22,7 +22,7 @@ router.get('/home', (req, res) => {
 router.get('/community', async (req, res) => {
   const allWorkouts = await Workout.find();
   // console.log(allWorkouts);
-  res.render('community/index.ejs', {allWorkouts})
+  res.render('community/index.ejs', {allWorkouts, logged: req.session.logged})
 })
 
 //COMMUNITY show
@@ -33,7 +33,7 @@ router.get('/community/:id', async (req, res) => {
   // console.log(comments);
   const user = await User.find({_id: workout.user});
   console.log(user);
-  res.render('community/show.ejs', {workout, comments, user})
+  res.render('community/show.ejs', {workout, comments, user, logged: req.session.logged})
 })
 
 router.post('/community/:id', async (req, res) => {
@@ -52,7 +52,8 @@ router.get('/workouts', async (req, res) => {
     // console.log(userWorkouts);
     res.render('workouts/index.ejs', {
       user,
-      userWorkouts
+      userWorkouts,
+      logged: req.session.logged
     });
   } else {
     res.redirect('/user/login');
@@ -65,7 +66,7 @@ router.get('/workouts/:id', async (req, res) => {
   const workout = await Workout.findById(req.params.id);
   const comments = await Comment.find({workout: req.params.id});
   // console.log(workout);
-  res.render('workouts/show.ejs', {workout, comments});
+  res.render('workouts/show.ejs', {workout, comments, logged: req.session.logged});
 })
 
 
@@ -74,7 +75,7 @@ router.get('/workouts/:id', async (req, res) => {
 router.get('/new', async (req, res) => {
   const user = await User.find({username: req.session.username});
   console.log(user);
-  res.render('workouts/new.ejs', {user});
+  res.render('workouts/new.ejs', {user, logged: req.session.logged});
 })
 
 router.post('/workouts', async (req, res) => {
@@ -237,7 +238,7 @@ router.post('/workouts', async (req, res) => {
 router.get('/workouts/:id/edit', async (req, res) => {
   const user = await User.find({user: req.session.user});
   const workout = await Workout.findById(req.params.id);
-  res.render('workouts/edit.ejs', {user, workout});
+  res.render('workouts/edit.ejs', {user, workout, logged: req.session.logged});
 })
 
 router.put('/workouts/:id', async (req, res) => {

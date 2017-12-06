@@ -8,7 +8,8 @@ const User = require('../models/user.js');
 router.get('/login', (req, res) => {
   res.render('home/login.ejs', {
     message: req.session.message,
-    registerMessage: req.session.registerMessage
+    registerMessage: req.session.registerMessage,
+    logged: req.session.logged
 
   });
 })

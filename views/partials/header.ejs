@@ -9,7 +9,10 @@
       <li><a href="/workout_tracker/home#about">About</a></li>
       <li><a href="/workout_tracker/home#features">Features</a></li>
       <li><a href="/workout_tracker/workouts">My Account</a></li>
-      <li><a href="/user/login">Log In</a></li>
+      <% if (!logged) { %>
+        <li><a href="/user/login">Log In</a></li>
+      <% } %>
+
     </ul>
   </div>
 </nav>
