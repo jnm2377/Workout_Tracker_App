@@ -32,14 +32,39 @@ body {
     right: 0;
     left: 0;
     z-index: 1030;
-    max-height: 50px;
+    max-height: 52px;
     margin-bottom: 20px;
     display: block;
     border-bottom: 1px solid #9d9d9d;
 }
+#diamond-shield-nav {
+  margin: 5px;
+	width: 0;
+	height: 0;
+	border: 15px solid transparent;
+	border-bottom: 5px solid #337ab7;
+	position: relative;
+	top: -15px;
+}
+#diamond-shield-nav:after {
+	content: '';
+	position: absolute;
+	left: -15px; top: 5px;
+	width: 0;
+	height: 0;
+	border: 15px solid transparent;
+	border-top: 25px solid #337ab7;
+}
+
+.nav-links-container {
+  padding-left: 10px;
+  display: flex;
+  flex-direction: row;
+}
 
 .navigation{
   margin-top: 10px;
+  padding-left: 0;
 }
 
 .navigation > li {
