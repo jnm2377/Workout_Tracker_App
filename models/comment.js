@@ -1,7 +1,8 @@
 const mongoose = require('mongoose');
 
 const commentSchema = mongoose.Schema({
-  content: { type: String, require: true },
+  author: { type: String, required: true },
+  content: { type: String, required: true },
   workout: {type: mongoose.Schema.Types.ObjectId, ref: 'Workout'}
 });
 
