@@ -233,8 +233,6 @@
       <div class="form-container comment-form">
         <br>
         <form action="/workout_tracker/community/<%= workout._id %>" method="POST">
-          <label for="content">Comment:</label>
-          <br>
           <input id="content" type="hidden" name="author" value="<%= loggedUser[0].username %>" required/>
           <br>
           <label for="content">Comment:</label>
