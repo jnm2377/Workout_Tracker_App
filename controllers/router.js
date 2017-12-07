@@ -239,7 +239,8 @@ router.post('/workouts', async (req, res) => {
 
 //UPDATE workout
 router.get('/workouts/:id/edit', async (req, res) => {
-  const user = await User.find({user: req.session.user});
+  const user = await User.find({username: req.session.username});
+  console.log(user);
   const workout = await Workout.findById(req.params.id);
   res.render('workouts/edit.ejs', {user, workout, logged: req.session.logged});
 })
