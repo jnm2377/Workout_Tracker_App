@@ -62,15 +62,20 @@ I utilized the Heroku cloud platform to deploy my application model. To view it 
 * **Heroku** - *Used to deploy my app.*
 * **Imgur** - *Used to host my images.*
 
-## Planning and WireFrames
+## Planning and Wireframes
 Before writing out any code, I like to plan it all on pen and paper, to make sense of things. I did a lot of planning and wireframing on my notebook throughout the whole process of creating this app. These are some images of my notes.
-![Wireframe and Planning Notes](https://i.imgur.com/T9kfpMl.png)
 ```
 Wireframe and Planning Notes
 ```
+![Wireframe and Planning Notes](https://i.imgur.com/FgGQ5IB.jpg)
+![Wireframe and Planning Notes](https://i.imgur.com/huWCtCb.jpg)
+![Wireframe and Planning Notes](https://i.imgur.com/nBSJUrA.jpg)
+![Wireframe and Planning Notes](https://i.imgur.com/WoKMeFz.jpg)
+![Wireframe and Planning Notes](https://i.imgur.com/4BovepI.jpg)
 
-## Updates
-It is my hope that with more time and more knowledge, I will be able to add more features to this app. Some of the many things I'd like to add are a search bar, where users can search workout names or user names to find certain workouts, the ability for users to delete their account, a
+
+## Updates and Future Goals
+It is my hope that with more time and more knowledge, I will be able to add more features to this app. Some of the many things I'd like to add are a search bar - where users can search workout names or user names to find certain workouts — and the ability for users to delete their account. Currently, the Add PR button in the user's workout page doesn't do anything. I would also like to add the ability for users to friend each other, and get notifications when people comment on their workouts, when their friends add a workout, etc.
 
 ## Contributing
 
