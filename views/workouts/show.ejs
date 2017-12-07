@@ -12,7 +12,9 @@
         <br>
 
         <h4>Date: <small><%= workout.date %></small></h2>
-        <h4>Notes: <small><%= workout.notes %></small></h2>
+        <div class="notes-container-userShow">
+          <h4>Notes: <small><%= workout.notes %></small></h2>
+        </div>
         <br>
         <p> <a class="btn btn-primary" href="/workout_tracker/workouts/<%= workout._id %>/edit" role="button">Edit Workout</a> </p>
 

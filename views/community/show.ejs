@@ -8,31 +8,33 @@
 
     <div class="container container-fluid">
       <div class="columns-container">
-      <div class="user-info">
-        <div class="user-show-text">
-          <h3 id="gymrat-info">GymRat Info:</h3>
-          <h4>Username: <i><%= user[0].username %></i></h4>
-          <h4>Name: <i><%= user[0].name %> <%= user[0].lastname %></i></h4>
+        <div class="user-info">
+          <div class="user-show-text">
+            <h3 id="gymrat-info">GymRat Info:</h3>
+            <h4>Username: <i><%= user[0].username %></i></h4>
+            <h4>Name: <i><%= user[0].name %> <%= user[0].lastname %></i></h4>
+          </div>
+
+          <hr>
+          <h3 class="workout-show-text community-show-text">GymRat Comments:</h3>
+
+          <div class="community-comments-container">
+             <% for (comment of comments) { %>
+                 <div class="comment">
+                   <p><b><%= comment.author %>:</b></p>
+                   <p><i><%= comment.content %></i></p>
+                 </div>
+               <% } %>
+          </div>
         </div>
 
-        <hr>
-        <h3 class="workout-show-text community-show-text">GymRat Comments:</h3>
-
-        <div class="community-comments-container">
-           <% for (comment of comments) { %>
-               <div class="comment">
-                 <p><b><%= comment.author %>:</b></p>
-                 <p><i><%= comment.content %></i></p>
-               </div>
-             <% } %>
-        </div>
-      </div>
-
-      <div class="workout-info">
+        <div class="workout-info">
         <div class="workout-show-text">
           <h3 id="workout-name"><%= workout.workout %></h1>
           <h4>Date: <small><%= workout.date %></small></h2>
-          <h4>Notes: <small><%= workout.notes %></small></h2>
+          <div class="notes-container">
+            <h4>Notes: <small><%= workout.notes %></small></h2>
+          </div>
           <a class="btn btn-primary btn-md" href="/workout_tracker/community" role="button">GymRats</a>
         </div>
         <br>

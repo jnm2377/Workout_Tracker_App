@@ -189,6 +189,16 @@ input {
   text-align: center;
 }
 
+.notes-container {
+  margin: auto;
+  width: 70%;
+}
+
+.notes-container-userShow {
+  margin: auto;
+  width: 40%;
+}
+
 
 .workout-show-table {
   margin: auto;
@@ -249,13 +259,14 @@ h5 {
   display: flex;
   flex-direction: row;
   overflow: hidden;
-  height: 820px;
+  height: 850px;
+  justify-content: center;
 
 }
 
 .user-info {
   background: #337ab7;
-  width: 35%;
+  width: 39%;
   margin: 20px;
   border-radius: 4px;
   overflow: scroll;
