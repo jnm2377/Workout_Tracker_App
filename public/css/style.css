@@ -87,7 +87,7 @@ body {
             HOME PAGE
 *********************************************/
 
-.row {
+.row, .row2 {
   display: flex;
   flex-direction: row;
 }
@@ -104,6 +104,19 @@ body {
   width: 70%;
   margin: auto;
 }
+
+
+.row2 > p {
+  width: 37%;
+}
+
+.row2 > ul {
+  width: 25%;
+  margin: 0 1%;
+  color: #337ab7;
+  font-style: italic;
+}
+
 
 /********************************************
             ADD WORKOUT FORM PAGE
