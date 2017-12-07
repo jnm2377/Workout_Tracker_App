@@ -201,6 +201,11 @@ input {
   color: white;
 }
 
+h5 {
+  text-align: center;
+  color: #337ab7;
+}
+
 .table-row > td {
   width: 75px;
   border: 1px solid  #5a5a5a;
