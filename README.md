@@ -67,11 +67,11 @@ Before writing out any code, I like to plan it all on pen and paper, to make sen
 ```
 Wireframe and Planning Notes
 ```
-![Wireframe and Planning Notes](https://i.imgur.com/FgGQ5IB.jpg)
-![Wireframe and Planning Notes](https://i.imgur.com/huWCtCb.jpg)
-![Wireframe and Planning Notes](https://i.imgur.com/nBSJUrA.jpg)
-![Wireframe and Planning Notes](https://i.imgur.com/WoKMeFz.jpg)
-![Wireframe and Planning Notes](https://i.imgur.com/4BovepI.jpg)
+![Wireframe and Planning Notes](https://i.imgur.com/FgGQ5IBl.jpg)
+![Wireframe and Planning Notes](https://i.imgur.com/huWCtCbl.jpg)
+![Wireframe and Planning Notes](https://i.imgur.com/WoKMeFzl.jpg)
+![Wireframe and Planning Notes](https://i.imgur.com/4BovepIl.jpg)
+![Wireframe and Planning Notes](https://i.imgur.com/4BovepIl.jpg)
 
 
 ## Updates and Future Goals
