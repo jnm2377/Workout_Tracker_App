@@ -9,6 +9,7 @@ router.get('/login', (req, res) => {
   res.render('home/login.ejs', {
     message: req.session.message,
     registerMessage: req.session.registerMessage,
+    successfulMessage: req.session.successfulMessage,
     logged: req.session.logged
 
   });
@@ -67,6 +68,7 @@ router.post('/register', async (req, res) => {
       req.session.name = user.name;
       req.session.lastname = user.lastname;
       req.session.logged = true;
+      req.session.successfulMessage = "Bro, you're registered!";
       res.redirect('/user/login'); //redirecting for them to login
     } catch (e) {
       console.log(e.message);
