@@ -61,6 +61,8 @@ I utilized the Heroku cloud platform to deploy my application model. To view it 
 * **Atom** - *Used to write my code.*
 * **Heroku** - *Used to deploy my app.*
 * **Imgur** - *Used to host my images.*
+* **[Pexels](https://www.pexels.com/)** - *Used for stock images.*
+* **[Unsplash](https://unsplash.com/)** - *Used for stock images.*
 
 ## Planning and Wireframes
 Before writing out any code, I like to plan it all on pen and paper, to make sense of things. I did a lot of planning and wireframing on my notebook throughout the whole process of creating this app. These are some images of my notes.
@@ -75,7 +77,7 @@ Wireframe and Planning Notes
 
 
 ## Updates and Future Goals
-It is my hope that with more time and more knowledge, I will be able to add more features to this app. Some of the many things I'd like to add are a search bar - where users can search workout names or user names to find certain workouts — and the ability for users to delete their account. Currently, the Add PR button in the user's workout page doesn't do anything. I would also like to add the ability for users to friend each other, and get notifications when people comment on their workouts, when their friends add a workout, etc.
+It is my hope that with more time and more knowledge, I will be able to add more features to this app. Some of the many things I'd like to add are a search bar - where users can search workout names or user names to find certain workouts — and the ability for users to delete their account. Currently, the Add PR button in the user's workout page doesn't do anything, but in the future, I would like to give users the ability to add PRs for lifts, and then as you update it, it'll give you a percentage of how much heavier you are lifting than when you first started. I would also like to add the ability for users to friend each other, and get notifications when people comment on their workouts, when their friends add a workout, etc. Lastly, I would like to have the workouts be sorted into archives, to show you your most current workouts only, and then store the rest into months, and eventually years, so it's easier to find specific dates. I would like to do something similar for the community index page, but instead of sorting into dates, sort them into lifting categories like legs, arms, etc., and then within those categories, archive them by date maybe.
 
 ## Contributing
 

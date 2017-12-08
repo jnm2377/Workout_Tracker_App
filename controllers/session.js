@@ -28,12 +28,12 @@ router.post('/login', async (req, res) => {
       res.redirect('/workout_tracker/workouts');
     } else {
       console.log('bad password');
-      req.session.message = "Username or password are incorrect";
+      req.session.message = "Bro, what are you doing? Username or password are incorrect.";
       res.redirect('/user/login');
     }
   } catch (e) {
     console.log(e.message);
-    req.session.message = "Username or password are incorrect";
+    req.session.message = "Bro, what are you doing? Username or password are incorrect.";
     res.redirect('/user/login');
   }
 })
@@ -73,7 +73,7 @@ router.post('/register', async (req, res) => {
     }
   } else {
     console.log('USERNAME TAKEN!');
-    req.session.registerMessage = "Username already taken. WOMP WOMP.";
+    req.session.registerMessage = "Bro, that username is already taken.";
     res.redirect('/user/login');
 
   }
