@@ -11,7 +11,7 @@
         <button class="btn btn-danger"><%= message %></button>
       <% } %>
 
-      <% if (registerMessage) { %>
+      <% if (registerMessage && !logged) { %>
         <button class="btn btn-danger"><%= registerMessage %></button>
       <% } %>
 

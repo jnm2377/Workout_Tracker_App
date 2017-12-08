@@ -69,7 +69,7 @@ router.post('/register', async (req, res) => {
       req.session.lastname = user.lastname;
       req.session.logged = true;
       req.session.successfulMessage = "Bro, you're registered!";
-      res.redirect('/user/login'); //redirecting for them to login
+      res.redirect('/workout_tracker/workouts'); //redirecting for them to login
     } catch (e) {
       console.log(e.message);
     }
